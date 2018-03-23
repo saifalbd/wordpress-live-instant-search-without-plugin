@@ -1,0 +1,54 @@
+
+
+/*
+  Theme Name: saifal_live_Search_Example
+  Theme URI: http://saifal.com
+  Description: simple wordprss live search api 
+  Version: 1.0.0
+ author Name : saifur Rahman;
+  Tags: api,wordpress search, wordpress live search
+
+ 
+*/
+/*------------------------------------ */
+
+
+body{
+background: black;
+padding: 0;
+margin: 0;
+}
+#app,.inputbox{
+display: flex;
+justify-content: center;
+align-items: center;	
+}
+#app{
+flex-direction: column;
+width:100%;
+background: white;
+position: relative;
+}
+.inputbox{
+width:70%;
+min-width:350px;
+padding:20px;
+background: white;
+}
+input,select{
+	height:30px;
+	font-size:21px;
+	padding-right:10px; 
+	padding-left:10px;
+}
+.select{ height:35px;}
+ul{
+
+display: block;
+	background: gold;
+	color:black;
+}
+li{
+	padding: 20px;
+	list-style-type:none;
+}
