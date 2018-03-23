@@ -38,11 +38,11 @@ $arg= [
 ];
 
 
-// your default looklike for post 
+// your default  post url
 // http://saifal.local/wp-json/myplugin/v1/find?mypost=value
-// your default looklike for author 
+// your default category url
 // http://saifal.local/wp-json/myplugin/v1/find?mycategory=value
-// your default looklike for author 
+// your default author url
 // http://saifal.local/wp-json/myplugin/v1/find?myauthor=value
 
 
