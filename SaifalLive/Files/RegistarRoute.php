@@ -121,14 +121,6 @@ if ($this->stringVlidation($authorslug)) {
 $this->authorslug = $authorslug;
  }}
 
-
-
-
-
-
-
-
-
 }
 
 
