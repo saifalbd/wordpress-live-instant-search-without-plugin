@@ -142,24 +142,24 @@ public function textFilter(string $arg):string
 }
 
 
-public function setDescription(string $text)
+public function setDescription(array $textArg)
 {
 
-$text = strip_tags($text);
+$text = strip_tags($textArg['text']);
 if (str_word_count($text)>$this->wordlength()) {
 
 $TextLinker = new TextLinker();
 $length = $this->wordlength();
 $linktxt = $this->linkTxt();
 $linkclass = $this->linkClass();
-$endLineTxt = $this->endLineTxt();
+$endLineTxt = $this->endLineTxt(); //dot
 
 $getSort = $TextLinker->getSort(['text'=>$text,'length'=>$length]); //['text',length]
 $description =  $TextLinker->getLink(
 [
 'text'=>$getSort,
-'link'=>$linktxt,
-'linkclass'=>$linkclass,
+'link'=>$textArg['link'],
+'linktxt'=>$linktxt,
 'linkclass'=>$linkclass,
 'dotval'=>$endLineTxt
 ]	
@@ -234,7 +234,7 @@ $count = $this->setCount($reqName,$arg['count']);
 if ($this->txtoptions()) {
 if ($this->vaildText($arg['description'])) {
 
-$description = $this->setDescription($arg['description']);
+$description = $this->setDescription(['text'=>$arg['description'],'link'=>$link]);
 }else{
 $description ='';	
 }
